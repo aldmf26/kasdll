@@ -8,15 +8,26 @@
     </x-slot>
     <x-slot name="cardBody">
         <section class="row">
+            @php
+                $ttlDebit = 0;
+                $ttlKredit = 0;
+                $ttlSaldo = 0;
+
+                foreach($buku as $d) {
+                    $ttlDebit += $d->debit;
+                    $ttlKredit += $d->kredit;
+                    $ttlSaldo += $d->debit - $d->kredit;
+                }
+            @endphp
             <table class="table table-hover table-striped" id="table1">
                 <thead>
                     <tr>
                         <th width="5">#</th>
                         <th>Kode Akun</th>
                         <th>Akun</th>
-                        <th style="text-align: right">Debit</th>
-                        <th style="text-align: right">Kredit</th>
-                        <th style="text-align: right">Saldo</th>
+                        <th style="text-align: right">Debit ({{ $ttlDebit }})</th>
+                        <th style="text-align: right">Kredit ({{ $ttlKredit }})</th>
+                        <th style="text-align: right">Saldo ({{ $ttlSaldo }})</th>
                     </tr>
                 </thead>
                 <tbody>
