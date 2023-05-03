@@ -115,7 +115,7 @@
                     </div>
                 </form>
 
-                <div class="login100-more" style="background-image: url(/assets/login/img/log2.svg);">
+                <div class="login100-more" style="background-image: url(/assets/login/img/login.jpg);">
                 </div>
             </div>
         </div>
