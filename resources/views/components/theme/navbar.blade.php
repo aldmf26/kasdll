@@ -3,6 +3,7 @@
         <div class="container">
             <div class="logo">
                 <a href="dashboard"><img src="/assets/login/img/empat.svg" alt="Logo"></a>
+                <h5>Kas DLL</h5>
             </div>
             <div class="header-top-right">
 
