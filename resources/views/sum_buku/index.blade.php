@@ -25,9 +25,9 @@
                         <th width="5">#</th>
                         <th>Kode Akun</th>
                         <th>Akun</th>
-                        <th style="text-align: right">Debit ({{ $ttlDebit }})</th>
-                        <th style="text-align: right">Kredit ({{ $ttlKredit }})</th>
-                        <th style="text-align: right">Saldo ({{ $ttlSaldo }})</th>
+                        <th style="text-align: right">Debit ({{ number_format($ttlDebit,0) }})</th>
+                        <th style="text-align: right">Kredit ({{ number_format($ttlKredit,0) }})</th>
+                        <th style="text-align: right">Saldo ({{ number_format($ttlSaldo,0) }})</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,6 +43,7 @@
                         <td style="text-align: right">{{number_format($a->debit - $a->kredit,0)}}</td>
                     </tr>
                     @endforeach
+             
                 </tbody>
             </table>
         </section>
