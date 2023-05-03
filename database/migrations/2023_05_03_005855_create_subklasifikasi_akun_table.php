@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tb_gudang', function (Blueprint $table) {
-            $table->integer('id_gudang', true);
-            $table->string('kd_gudang', 10);
-            $table->string('nm_gudang', 100);
-            $table->integer('id_departemen');
-            $table->string('admin', 100);
+        Schema::create('subklasifikasi_akun', function (Blueprint $table) {
+            $table->increments('id_subklasifikasi_akun');
+            $table->string('nm_subklasifikasi');
+            $table->integer('kode_sub');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_gudang');
+        Schema::dropIfExists('subklasifikasi_akun');
     }
 };

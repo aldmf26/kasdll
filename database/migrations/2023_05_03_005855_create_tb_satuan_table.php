@@ -8,19 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('tb_satuan', function (Blueprint $table) {
-            $table->integerIncrements('id_satuan');
+            $table->increments('id_satuan');
             $table->string('nm_satuan');
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('tb_satuan');
     }

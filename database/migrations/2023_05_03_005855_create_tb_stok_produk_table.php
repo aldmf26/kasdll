@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tb_stok_produk', function (Blueprint $table) {
             $table->integer('id_stok_produk', true);
             $table->integer('id_produk');
+            $table->integer('urutan');
             $table->string('no_nota', 100);
             $table->date('tgl');
             $table->enum('jenis', ['draft', 'selesai']);
@@ -28,6 +29,7 @@ return new class extends Migration
             $table->double('rp_satuan');
             $table->string('ket', 200)->nullable();
             $table->integer('gudang_id');
+            $table->integer('kategori_id');
             $table->integer('departemen_id');
             $table->string('admin', 100);
 

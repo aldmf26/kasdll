@@ -8,21 +8,25 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('notas', function (Blueprint $table) {
-            $table->id();
-            $table->integer('nomor_nota')->unique();
+        Schema::create('tb_posisi', function (Blueprint $table) {
+            $table->increments('id_posisi');
+            $table->string('nm_posisi');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('notas');
+        Schema::dropIfExists('tb_posisi');
     }
 };

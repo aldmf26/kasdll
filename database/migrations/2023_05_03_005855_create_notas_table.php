@@ -8,20 +8,25 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('buku_besars', function (Blueprint $table) {
-            $table->id();
+        Schema::create('notas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('nomor_nota')->unique();
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('buku_besars');
+        Schema::dropIfExists('notas');
     }
 };

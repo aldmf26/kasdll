@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('id_produk', true);
             $table->integer('kd_produk');
             $table->string('nm_produk', 100);
+            $table->integer('kategori_id');
             $table->integer('gudang_id');
             $table->integer('satuan_id');
             $table->integer('departemen_id');
