@@ -33,7 +33,7 @@
                     <tr>
                         <td>{{ $no + 1 }}</td>
                         <td class="nowrap">{{ date('d-m-Y', strtotime($a->tgl)) }}</td>
-                        <td>{{ $a->no_urutan }}</td>
+                        <td>{{ $a->no_urut }}</td>
                         <td>{{ ucwords(strtolower($a->nm_akun)) }}</td>
                         <td>{{ ucwords(strtolower($a->nm_post ?? '')) }}</td>
                         <td>{{ ucwords($a->ket) }}</td>
