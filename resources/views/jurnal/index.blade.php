@@ -19,7 +19,7 @@
                     <tr>
                         <th width="5">#</th>
                         <th>Tanggal</th>
-                        <th>No Nota</th>
+                        <th>No CFM</th>
                         <th>Akun</th>
                         <th>Sub Akun</th>
                         <th>Keterangan</th>
@@ -33,7 +33,7 @@
                     <tr>
                         <td>{{ $no + 1 }}</td>
                         <td class="nowrap">{{ date('d-m-Y', strtotime($a->tgl)) }}</td>
-                        <td>{{ $a->no_nota }}</td>
+                        <td>{{ $a->no_dokumen }}</td>
                         <td>{{ ucwords(strtolower($a->nm_akun)) }}</td>
                         <td>{{ ucwords(strtolower($a->nm_post ?? '')) }}</td>
                         <td>{{ ucwords($a->ket) }}</td>
