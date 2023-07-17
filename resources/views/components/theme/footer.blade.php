@@ -40,7 +40,23 @@
         dropdownParent: $('#view .modal-content')
     });
 
+$('.costume_muncul').hide();
+    $('.bulan_muncul').hide();
+    $('.tahun_muncul').hide();
+    $('.tgl').prop('disabled', true);
+    $(document).on("change", ".filter_tgl", function() {
+        var period = $(this).val();
+        $('.costume_muncul').toggle(period === 'costume');
+        $('.tgl').prop('disabled', period !== 'costume');
 
+        $('.bulan_muncul').toggle(period === 'mounthly');
+        $('.bulan').prop('disabled', period !== 'mounthly');
+
+        $('.tahun_muncul').toggle(period === 'years');
+        $('.tahun').prop('disabled', period !== 'years');
+
+
+    });
     $('#select2').select2({
     });
 

@@ -8,7 +8,7 @@
                     class="float-end btn   btn-success me-2"><i class="fas fa-file-excel"></i> Export</a>
                 <x-theme.button modal="T" href="{{ route('jurnal.add') }}" icon="fa-plus" addClass="float-end"
                     teks="Buat Baru" />
-                <x-theme.button modal="Y" idModal="view" icon="fa-filter" addClass="float-end" teks="" />
+                <x-theme.btn_filter />
             </div>
         </div>
     </x-slot>
@@ -84,51 +84,7 @@
             </table>
         </section>
 
-        <form action="" method="get">
-            <x-theme.modal title="Filter Jurnal Umum" idModal="view">
-                <div class="row">
-                    <div class="col-lg-12">
-
-                        <table width="100%" cellpadding="10px">
-                            <tr>
-                                <td>Tanggal</td>
-                                <td colspan="2">
-                                    <select name="period" id="" class="form-control filter_tgl">
-                                        <option value="daily">Hari ini</option>
-                                        <option value="weekly">Minggu ini</option>
-                                        <option value="mounthly">Bulan ini</option>
-                                        <option value="costume">Costume</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="costume_muncul">
-                                <td></td>
-                                <td>
-                                    <label for="">Dari</label>
-                                    <input type="date" name="tgl1" class="form-control tgl">
-                                </td>
-                                <td>
-                                    <label for="">Sampai</label>
-                                    <input type="date" name="tgl2" class="form-control tgl">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Proyek</td>
-                                <td colspan="2">
-                                    <select name="id_proyek" id="selectView" class="">
-                                        <option value="0">All</option>
-                                        @foreach ($proyek as $p)
-                                        <option value="{{ $p->id_proyek }}">{{ $p->nm_proyek }}</option>
-                                        @endforeach
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-            </x-theme.modal>
-        </form>
+        
         <form action="{{ route('import_jurnal') }}" method="post" enctype="multipart/form-data">
             @csrf
             <x-theme.modal title="Import Jurnal" idModal="import">

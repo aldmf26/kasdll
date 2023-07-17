@@ -25,7 +25,7 @@
                     <option value="{{$a->id_akun}}">{{$a->nm_akun}}</option>
                     @endforeach
                 </select>
-                <div class="collapse join1">
+                <div class="">
                     <label for="" class="mt-2 ">No CFM</label>
                     <input type="text" class="form-control " name="no_urut[]">
                 </div>
@@ -72,7 +72,7 @@
                     <option value="{{$a->id_akun}}">{{$a->nm_akun}}</option>
                     @endforeach
                 </select>
-                <div class="collapse join2">
+                <div class="">
                     <label for="" class="mt-2 ">No CFM</label>
                     <input type="text" class="form-control " name="no_urut[]">
                 </div>
